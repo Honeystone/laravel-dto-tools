@@ -54,7 +54,7 @@ use Honeystone\DtoTools\Contracts\Transferable;
 
 final readonly class ArticleData implements Transferable
 {
-    use HasTransferableData
+    use HasTransferableData;
 
     public function __construct(
         public string $title,
@@ -94,7 +94,7 @@ use Honeystone\DtoTools\Casters\NullCaster;
 
 final readonly class ArticleData implements Transferable
 {
-    use HasTransferableData
+    use HasTransferableData;
 
     public function __construct(
         public string $title,
@@ -174,7 +174,7 @@ Sometimes you need to make sweeping changes to all parameters entering your DTO.
 ```php
 final readonly class SomeData implements Transferable
 {
-    use HasTransferableData
+    use HasTransferableData;
 
     public function __construct(
         public string $foo,
@@ -257,7 +257,7 @@ use Honeystone\DtoTools\Contracts\Storable;
 
 final class ArticlePatchData implements Storable
 {
-    use HasStorableData
+    use HasStorableData;
 
     public function __construct(
         public readonly string $title,
@@ -281,7 +281,7 @@ use Honeystone\DtoTools\Attributes\Patch;
 #[Patch]
 final class ArticlePatchData implements Storable
 {
-    use HasStorableData
+    use HasStorableData;
 
     public function __construct(
         //...
@@ -332,7 +332,7 @@ You could do this with a simple property on your DTO, for example:
 #[Patch]
 final class ArticlePatchData implements Storable
 {
-    use HasStorableData
+    use HasStorableData;
 
     /**
     * @param array<int>|null $tags
@@ -357,7 +357,7 @@ use Honeystone\DtoTools\Attributes\ToMany;
 #[ToMany(['tags' => 'int|empty'])]
 final class ArticlePatchData implements Storable
 {
-    use HasStorableData
+    use HasStorableData;
 
     public function __construct(
         //...
