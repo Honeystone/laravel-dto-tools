@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Honeystone\DtoTools\Tests\Unit\Concerns\Fixtures\TransformationData;
+use Honeystone\DtoTools\Tests\Unit\Concerns\Fixtures\KeyTransformationData;
 
 it('transforms arrayables')
     ->expect(TransformationData::make(data: TransformationData::make(value: 'foo'))->toArray())
@@ -46,4 +47,11 @@ it('allows transformations to be bypassed')
     ->toBe([
         'value' => 'BAR',
         'data' => null,
+    ]);
+
+it('skips the key property')
+    ->expect(KeyTransformationData::make(id: 8)->toRawArray())
+    ->toBe([
+        'id' => 8,
+        'value' => 'Foo',
     ]);

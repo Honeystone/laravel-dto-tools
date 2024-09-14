@@ -20,7 +20,7 @@ trait SerializesToArray
     {
         $skip = method_exists($this, 'excludeFromSerialization') ?
             $this->excludeFromSerialization() :
-            [];
+            ['keyProperty'];
 
         $serialized = [];
 
