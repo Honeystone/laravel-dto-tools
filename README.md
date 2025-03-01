@@ -188,6 +188,7 @@ final readonly class SomeData implements Transferable
     }
 }
 ```
+
 ```php
 echo SomeData::make(['foo', 'bar'])->getAttributes(); //['foo' => '🔥 foo 🔥', 'bar' => '🔥 bar 🔥']
 ```
@@ -234,6 +235,7 @@ final readonly class SomeData implements Transferable
     }
 }
 ```
+
 ```php
 echo SomeData::make(some_property: 'value')->getAttributes(); //['someProperty'  => 'value']
 echo SomeData::make(some_property: 'value')->toArray();       //['some_property' => 'value']
@@ -562,4 +564,4 @@ A list of changes can be found in the [CHANGELOG.md](CHANGELOG.md) file.
 
 ## License
 
-[MIT](LICENSE.md) © [Honeystone Consulting Ltd](https://honeystone.com)
+[MIT](LICENSE.md) © George Palmer, [Honeystone Consulting Ltd](https://honeystone.com)
