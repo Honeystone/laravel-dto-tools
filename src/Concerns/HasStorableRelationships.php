@@ -27,6 +27,9 @@ trait HasStorableRelationships
         return $this->relationships;
     }
 
+    /**
+     * @return array<string, int|string|array<int|string>|null>
+     */
     public function getRelationships(): array
     {
         return $this->relationships()->toArray();

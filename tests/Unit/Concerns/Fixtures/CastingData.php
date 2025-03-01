@@ -17,6 +17,5 @@ final readonly class CastingData implements Transferable
         public string $default = '',
         #[ScalarCaster('string', 'int')]
         public string|int $stringInt = 0,
-    ) {
-    }
+    ) {}
 }

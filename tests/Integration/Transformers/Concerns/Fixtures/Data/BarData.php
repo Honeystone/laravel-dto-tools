@@ -16,6 +16,5 @@ final readonly class BarData implements Transferable
         #[ScalarCaster('int')]
         public int $id,
         public ?string $foobar = null,
-    ) {
-    }
+    ) {}
 }

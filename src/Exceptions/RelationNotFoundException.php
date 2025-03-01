@@ -6,6 +6,4 @@ namespace Honeystone\DtoTools\Exceptions;
 
 use RuntimeException;
 
-final class RelationNotFoundException extends RuntimeException
-{
-}
+final class RelationNotFoundException extends RuntimeException {}

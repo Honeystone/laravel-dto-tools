@@ -16,6 +16,5 @@ final class KeyTransformationData implements Transferable
     public function __construct(
         public int $id,
         public string $value = 'Foo',
-    ) {
-    }
+    ) {}
 }

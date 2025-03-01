@@ -14,6 +14,5 @@ final readonly class MetaData implements Transferable
     public function __construct(
         public int $order,
         public string $title,
-    ) {
-    }
+    ) {}
 }

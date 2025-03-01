@@ -20,7 +20,6 @@ interface TransformsCollections extends ManipulatesSchema
 {
     /**
      * @param EloquentCollection<int, TModel> $models
-     * @param mixed ...$parameters
      *
      * @return Collection<int, TData>
      */

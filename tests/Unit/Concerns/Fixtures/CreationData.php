@@ -22,6 +22,5 @@ final class CreationData implements Storable
         public readonly ?string $foo = null,
         public readonly ?int $bar = null,
         public readonly array $baz = [],
-    ) {
-    }
+    ) {}
 }

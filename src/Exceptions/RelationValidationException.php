@@ -6,6 +6,4 @@ namespace Honeystone\DtoTools\Exceptions;
 
 use RuntimeException;
 
-final class RelationValidationException extends RuntimeException
-{
-}
+final class RelationValidationException extends RuntimeException {}

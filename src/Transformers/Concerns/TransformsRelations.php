@@ -21,7 +21,6 @@ trait TransformsRelations
 {
     /**
      * @param TModel $model
-     * @param mixed ...$parameters
      *
      * @return Collection<int, Transferable>|Transferable|null
      */
@@ -40,7 +39,6 @@ trait TransformsRelations
 
     /**
      * @param TModel $model
-     * @param mixed ...$parameters
      *
      * @return Collection<int, Transferable>|Transferable|null
      */
@@ -105,7 +103,7 @@ trait TransformsRelations
     final protected function transformRelatedCollection(EloquentCollection $models, array $parameters = []): Collection
     {
         if ($models->isEmpty()) {
-            return new Collection();
+            return new Collection;
         }
 
         [$exclude, $override, $parameters] = $this->extractManipulations($parameters);

@@ -77,6 +77,7 @@ final class Relationships implements StorableRelationships
     {
         if ($this->isToOneRelationship($name)) {
             $this->setOneRelated($name, $value);
+
             return;
         }
 
@@ -290,11 +291,11 @@ final class Relationships implements StorableRelationships
                 static fn (array $relationships): array => (new Collection($relationships))
                     ->mapWithKeys(static function (string $value, int|string $key): array {
 
-                    if (is_string($key)) {
-                        return [$key => explode('|', $value)];
-                    }
+                        if (is_string($key)) {
+                            return [$key => explode('|', $value)];
+                        }
 
-                    return [$value => ['int', 'string', 'empty', 'null']];
+                        return [$value => ['int', 'string', 'empty', 'null']];
                     })->toArray(),
             )->toArray();
     }
@@ -481,7 +482,7 @@ final class Relationships implements StorableRelationships
      *
      * @return array<int|string, array<string, mixed>>|null
      */
-    private function transferableToMeta(array|Transferable|null $meta): array|null
+    private function transferableToMeta(array|Transferable|null $meta): ?array
     {
         if ($meta instanceof Transferable) {
             return $meta->toArray();

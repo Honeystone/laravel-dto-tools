@@ -124,7 +124,7 @@ it('transforms a collection', function (): void {
             'state' => 'published',
             'modified' => $modified,
             'foobar' => 'baz',
-        ])
+        ]),
     ]);
 
     $factory = new TransformerFactory([Foo::class => MapMethodTransformer::class]);
@@ -266,7 +266,7 @@ it('transforms with relations, inlcluded not loaded', function (): void {
         'state' => 'draft',
         'modified' => $modified,
 
-        //relations
+        // relations
         'bar' => null,
     ]);
 
@@ -283,7 +283,7 @@ it('transforms with relations, inlcluded not loaded', function (): void {
             'state' => State::DRAFT,
             'modified' => $modified->toIso8601String(),
 
-            //relations
+            // relations
             'bar' => null,
             'baz' => null,
         ]);
@@ -325,7 +325,7 @@ it('transforms with relations, loaded', function (): void {
         'state' => 'draft',
         'modified' => $modified,
 
-        //relations
+        // relations
         'bar' => new Bar(['id' => 1]),
         'baz' => new EloquentCollection([new Baz(['id' => 1]), new Baz(['id' => 2])]),
     ]);
@@ -343,7 +343,7 @@ it('transforms with relations, loaded', function (): void {
             'state' => State::DRAFT,
             'modified' => $modified->toIso8601String(),
 
-            //relations
+            // relations
             'bar' => [
                 'id' => 1,
                 'foobar' => null,
@@ -374,7 +374,7 @@ it('transforms with loaded relations and a callback', function (): void {
         'state' => 'draft',
         'modified' => $modified,
 
-        //relations
+        // relations
         'bar' => new Bar(['id' => 1]),
         'baz' => new EloquentCollection([new Baz(['id' => 1]), new Baz(['id' => 2])]),
     ]);
@@ -394,7 +394,7 @@ it('transforms with loaded relations and a callback', function (): void {
             'state' => State::DRAFT,
             'modified' => $modified->toIso8601String(),
 
-            //relations
+            // relations
             'bar' => [
                 'id' => 1,
                 'foobar' => 'barbaz',
@@ -425,7 +425,7 @@ it('transforms with loaded relations and exclusions', function (): void {
         'state' => 'draft',
         'modified' => $modified,
 
-        //relations
+        // relations
         'bar' => new Bar(['id' => 1, 'foobar' => 'barbaz']),
         'baz' => new EloquentCollection([new Baz(['id' => 1]), new Baz(['id' => 2])]),
     ]);
@@ -443,7 +443,7 @@ it('transforms with loaded relations and exclusions', function (): void {
             'state' => State::DRAFT,
             'modified' => $modified->toIso8601String(),
 
-            //relations
+            // relations
             'bar' => [
                 'id' => 1,
                 'foobar' => null,
@@ -474,7 +474,7 @@ it('transforms with loaded relations and overrides', function (): void {
         'state' => 'draft',
         'modified' => $modified,
 
-        //relations
+        // relations
         'bar' => new Bar(['id' => 1, 'foobar' => 'barbaz']),
         'baz' => new EloquentCollection([new Baz(['id' => 1]), new Baz(['id' => 2])]),
     ]);
@@ -492,7 +492,7 @@ it('transforms with loaded relations and overrides', function (): void {
             'state' => State::DRAFT,
             'modified' => $modified->toIso8601String(),
 
-            //relations
+            // relations
             'bar' => [
                 'id' => 1,
                 'foobar' => 'bar',

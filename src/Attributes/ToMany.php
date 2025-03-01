@@ -12,7 +12,5 @@ final readonly class ToMany
     /**
      * @param array<string, string> $relations
      */
-    public function __construct(public array $relations)
-    {
-    }
+    public function __construct(public array $relations) {}
 }

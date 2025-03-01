@@ -7,6 +7,4 @@ namespace Honeystone\DtoTools\Attributes;
 use Attribute;
 
 #[Attribute]
-final readonly class Patch
-{
-}
+final readonly class Patch {}

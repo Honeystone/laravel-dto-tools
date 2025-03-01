@@ -23,9 +23,7 @@ final readonly class TransformerFactory implements MakesTransformers
      *     class-string<TransformsModels<Model, Transferable>|TransformsCollections<Model, Transferable>>
      * > $map
      */
-    public function __construct(private array $map)
-    {
-    }
+    public function __construct(private array $map) {}
 
     public function makeForModel(Model $model): TransformsModels
     {

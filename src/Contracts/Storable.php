@@ -31,15 +31,11 @@ interface Storable extends Transferable
 
     /**
      * @see isPatching()
-     *
-     * @param string ...$attributes
      */
     public function force(string ...$attributes): static;
 
     /**
      * Manage storable relationships.
-     *
-     * @return StorableRelationships
      */
     public function relationships(): StorableRelationships;
 

@@ -11,7 +11,5 @@ final readonly class FooData implements Transferable
 {
     use HasTransferableData;
 
-    public function __construct(public int|string $id)
-    {
-    }
+    public function __construct(public int|string $id) {}
 }

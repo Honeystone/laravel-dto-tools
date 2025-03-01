@@ -37,6 +37,5 @@ final readonly class FooData implements Transferable
 
         public ?BarData $bar = null,
         public ?Collection $baz = null,
-    ) {
-    }
+    ) {}
 }

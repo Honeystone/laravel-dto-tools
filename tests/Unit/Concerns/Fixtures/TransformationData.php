@@ -14,8 +14,7 @@ final readonly class TransformationData implements Transferable
     public function __construct(
         public string $value = '',
         public self|array|null $data = null,
-    ) {
-    }
+    ) {}
 
     /**
      * @param array<string, string> $parameters

@@ -15,7 +15,6 @@ interface TransformsModels extends ManipulatesSchema
 {
     /**
      * @param TModel $model
-     * @param mixed ...$parameters
      *
      * @return TData
      */

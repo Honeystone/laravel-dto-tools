@@ -261,7 +261,7 @@ it('checks if we have a to-many relationship replacement', function (): void {
         'foo' => 'string',
         'bar' => 'string|empty|null',
         'baz' => 'string|empty|null',
-        'foobar' => 'string'
+        'foobar' => 'string',
     ]);
 
     $relationships->replaceToMany('foo', [':-)']);

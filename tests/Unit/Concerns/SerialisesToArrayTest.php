@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Honeystone\DtoTools\Tests\Unit\Concerns\Fixtures\TransformationData;
 use Honeystone\DtoTools\Tests\Unit\Concerns\Fixtures\KeyTransformationData;
+use Honeystone\DtoTools\Tests\Unit\Concerns\Fixtures\TransformationData;
 
 it('transforms arrayables')
     ->expect(TransformationData::make(data: TransformationData::make(value: 'foo'))->toArray())
@@ -18,8 +18,7 @@ it('transforms arrayables')
 it('transforms nested arrayables')
     ->expect(TransformationData::make(data: [
         'foo' => [
-            'bar' =>
-                TransformationData::make(value: 'baz'),
+            'bar' => TransformationData::make(value: 'baz'),
         ],
     ],
     )->toArray())
@@ -30,8 +29,8 @@ it('transforms nested arrayables')
                 'bar' => [
                     'transformed' => 'BAZ',
                     'data' => null,
-                ]
-            ]
+                ],
+            ],
         ],
     ]);
 

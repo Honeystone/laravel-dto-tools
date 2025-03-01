@@ -8,11 +8,12 @@ use Honeystone\DtoTools\Attributes\Patch;
 use ReflectionClass;
 
 use function collect;
+use function count;
 use function in_array;
 
 trait HasStorableData
 {
-    use HasTransferableData, HasStorableRelationships;
+    use HasStorableRelationships, HasTransferableData;
 
     /**
      * @var array<string>

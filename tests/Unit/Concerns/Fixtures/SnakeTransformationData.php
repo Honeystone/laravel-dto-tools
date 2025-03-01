@@ -11,9 +11,7 @@ use Honeystone\DtoTools\Contracts\Transferable;
 
 final readonly class SnakeTransformationData implements Transferable
 {
-    use HasTransferableData, CreatableFromSnake, SerializesToSnake;
+    use CreatableFromSnake, HasTransferableData, SerializesToSnake;
 
-    private function __construct(public string $multiWordParameter)
-    {
-    }
+    private function __construct(public string $multiWordParameter) {}
 }

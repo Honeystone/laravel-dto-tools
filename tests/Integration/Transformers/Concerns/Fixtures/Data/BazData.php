@@ -15,6 +15,5 @@ final readonly class BazData implements Transferable
     public function __construct(
         #[ScalarCaster('int')]
         public int $id,
-    ) {
-    }
+    ) {}
 }

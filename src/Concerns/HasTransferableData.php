@@ -13,6 +13,9 @@ trait HasTransferableData
         return $this->{$this->keyProperty ?? 'id'};
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getAttributes(): array
     {
         return $this->toRawArray();

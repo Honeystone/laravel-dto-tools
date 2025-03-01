@@ -25,7 +25,7 @@ use function property_exists;
  * @implements TransformsModels<TModel, TData>
  * @implements TransformsCollections<TModel, TData>
  */
-abstract class ModelTransformer implements TransformsModels, TransformsCollections
+abstract class ModelTransformer implements TransformsCollections, TransformsModels
 {
     /**
      * @use ManipulatesData<TModel, TData>
@@ -44,13 +44,10 @@ abstract class ModelTransformer implements TransformsModels, TransformsCollectio
 
     protected string $dataKeyName = 'id';
 
-    public function __construct(private readonly MakesTransformers $transformerFactory)
-    {
-    }
+    public function __construct(private readonly MakesTransformers $transformerFactory) {}
 
     /**
      * @param TModel $model
-     * @param mixed ...$parameters
      *
      * @return TData
      */
@@ -70,7 +67,6 @@ abstract class ModelTransformer implements TransformsModels, TransformsCollectio
 
     /**
      * @param EloquentCollection<int, TModel> $models
-     * @param mixed ...$parameters
      *
      * @return Collection<int, TData>
      */

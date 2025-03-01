@@ -8,12 +8,12 @@ use Attribute;
 use Carbon\Carbon;
 use Honeystone\DtoTools\Casters\Contracts\CastsValues;
 
+use function is_string;
+
 #[Attribute]
 final readonly class DateTimeCaster implements CastsValues
 {
-    public function __construct(private ?string $format = null)
-    {
-    }
+    public function __construct(private ?string $format = null) {}
 
     public function cast(mixed $value): ?string
     {
