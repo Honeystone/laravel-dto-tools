@@ -1,0 +1,16 @@
+{
+  "preset": "laravel",
+  "rules": {
+    "phpdoc_separation": false,
+    "not_operator_with_successor_space": false,
+    "global_namespace_import": {
+      "import_classes": true,
+      "import_constants": true,
+      "import_functions": true
+    },
+    "phpdoc_align": {
+      "align": "left",
+      "spacing": 1
+    }
+  }
+}

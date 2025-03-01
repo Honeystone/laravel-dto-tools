@@ -12,8 +12,5 @@ parameters:
 
     polluteScopeWithLoopInitialAssignments: false
     polluteScopeWithAlwaysIterableForeach: false
-    checkAlwaysTrueCheckTypeFunctionCall: true
-    checkAlwaysTrueInstanceof: true
-    checkAlwaysTrueStrictComparison: true
     checkExplicitMixedMissingReturn: true
     checkFunctionNameCase: true

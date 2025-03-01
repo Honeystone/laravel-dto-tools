@@ -8,3 +8,5 @@ coverage
 vendor
 node_modules
 .php-cs-fixer.cache
+.phpactor.json
+laradumps.yaml
