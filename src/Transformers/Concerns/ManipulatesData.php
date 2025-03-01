@@ -25,9 +25,6 @@ trait ManipulatesData
      */
     private array $overridden = [];
 
-    /**
-     * @return $this<TModel, TData>
-     */
     public function exclude(string ...$attributes): self
     {
         $this->excluded = $attributes;
@@ -37,8 +34,6 @@ trait ManipulatesData
 
     /**
      * @param array<string, mixed> $attributes
-     *
-     * @return $this<TModel, TData>
      */
     public function override(array $attributes): self
     {
