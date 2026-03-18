@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 - 2026-03-18
+
+- Added support for Laravel 13.
+
 ## 1.2.0 - 2025-03-01
 
 - Added support for Laravel 12.
